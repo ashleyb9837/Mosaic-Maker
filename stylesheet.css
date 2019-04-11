@@ -1,0 +1,61 @@
+html {
+	color: #AAAAAA;
+	font-family: sans-serif;
+	background-color: #aaaade;
+}
+
+input[type="color"] {
+    border: none;
+    background: #FFFFFF;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    border: 2px solid #AAAAAA;;
+    border-radius: 5px;
+    background: #FFFFFF;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    color: #AAAAAA;
+    font-size: 32px;
+}
+
+h1, .settingpanel {
+     text-align: center;
+}
+
+
+td{
+    width: 50px;
+    height:50px;
+}
+
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#page {
+    padding: 10px;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    min-height: 90%;
+    width: 700px;
+}
+
+.color5{
+    background: #FFFFFF;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]:checked + label {
+  color: #888888;
+  font-weight: bold;
+}

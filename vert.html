@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mosaic Maker</title>
+
+    <link rel=stylesheet type=text/css href="/static/css/stylesheet.css"/>
+    <!--formurl = get.db select url from entries where --- python variable in html {{ formurl }}-->
+
+    <style>
+    /*changes the grid colors*/
+    .color0{
+        background:{{ color }};
+    }
+
+    .color1{
+        background:{{ color1 }};
+    }
+
+    .color2{
+        background:{{ color2 }};
+    }
+
+    .color3{
+        background:{{ color3 }};
+    }
+
+    .color4{
+        background:{{ color4 }};
+    }
+
+    </style>
+</head>
+<body>
+<div id="page">
+    <h1>Mosaic Maker</h1>
+    <hr>
+    <form method="POST">
+        <div class="settingpanel">
+
+            <label for="color_0">Color 1</label>
+            <input type="color" name="color0" id="color_0" value="{{ color }}">
+
+            <label for="color_1">Color 2</label>
+            <input type="color" name="color1" id="color_1" value="{{ color1 }}">
+
+            <label for="color_2">Color 3</label>
+            <input type="color" name="color2" id="color_2" value="{{ color2 }}">
+
+            <label for="color_3">Color 4</label>
+            <input type="color" name="color3" id="color_3" value="{{ color3 }}">
+
+            <label for="color_4">Color 5</label>
+            <input type="color" name="color4" id="color_4" value="{{ color4 }}"> <!--value="{{ displaycolu5 }}">-->
+
+            <!-- Specifiy hex colour value on the CSSso the colour should stay static and change to what the user selects and submits -->
+
+        </div>
+        <div class="settingpanel">
+
+            <input type="radio" name="type" value="h-stripes"
+                   id="type_h-stripes"  checked >
+            <label for="type_h-stripes">h-stripes</label>
+
+            <input type="radio" name="type" value="v-stripes"
+                   id="type_v-stripes" >
+            <label for="type_v-stripes">v-stripes</label>
+
+            <input type="radio" name="type" value="carpet"
+                   id="type_carpet" >
+            <label for="type_carpet">carpet</label>
+
+            <input type="radio" name="type" value="random"
+                   id="type_random" >
+            <label for="type_random">random</label>
+
+            <input type="radio" name="type" value="diagonal"
+                   id="type_diagonal" >
+            <label for="type_diagonal">diagonal</label>
+
+        </div>
+        <input type="submit" value="show">
+    </form>
+    <hr>
+    <table>
+
+            <tr>
+
+                <td value="color0" class="color0"></td>
+
+                <td class="color1"></td>
+
+                <td class="color2"></td>
+
+                <td class="color3"></td>
+
+                <td class="color4"></td>
+
+            </tr>
+
+            <tr>
+
+                <td class="color0"></td>
+
+                <td class="color1"></td>
+
+                <td class="color2"></td>
+
+                <td class="color3"></td>
+
+                <td class="color4"></td>
+
+            </tr>
+
+            <tr>
+
+                <td class="color0"></td>
+
+                <td class="color1"></td>
+
+                <td class="color2"></td>
+
+                <td class="color3"></td>
+
+                <td class="color4"></td>
+
+            </tr>
+
+            <tr>
+            <!-- RANDOMISES colour values on POST Request -->
+                <td class="color0"></td>
+
+                <td class="color1"></td>
+
+                <td class="color2"></td>
+
+                <td class="color3"></td>
+
+                <td class="color4"></td>
+
+            </tr>
+
+            <tr>
+
+                <td class="color0"></td>
+
+                <td class="color1"></td>
+
+                <td class="color2"></td>
+
+                <td class="color3"></td>
+
+                <td class="color4"></td>
+
+            </tr>
+
+    </table>
+    <hr>
+    <span>{{ curent_time }}</span>
+</div>
+</body>
+</html>
