@@ -15,14 +15,10 @@ def main():
     new_color = request.form.get('color', '')
     if re.search(r'^[0-9A-F]{6}$', new_color):
         color = new_color
-
-#        randomcolourr1 = lambda: random.randint(0, 255)
-#        displaycolu1 = ('#%02X%02X%02X' % (randomcolourr1(), randomcolourr1(), randomcolourr1()))
+	
     print(new_color, displaycolu2)
     return render_template('main.html', color=color, displaycolu2=displaycolu2)
 
-# Python program to convert decimal to binary,
-# octal and hexadecimal
 
 # Function to convert decimal to binary
 def decimal_to_binary(dec):
